@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  * main - A C program that prints a text using puts function
  * Return: 0 (True)
