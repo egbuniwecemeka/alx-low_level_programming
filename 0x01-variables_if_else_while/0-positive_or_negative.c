@@ -1,8 +1,9 @@
-#insert <stdlib.h>
-#insert <time.h>
-#insert <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 /**
  * main - A function will assign a random number to the variable n each time it is executed.
+ *
  * Return: n (Success)
  */
 int main(void)
