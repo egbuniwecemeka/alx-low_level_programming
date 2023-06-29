@@ -57,3 +57,24 @@ After the loop, the null byte ('\0') is added at the end of the concatenated str
 Finally, the function returns a pointer to the resulting string dest.
 
 Overall, this implementation iterates through both dest and scr strings, finding the end of dest, copying the characters from scr to dest, and properly terminating the concatenated string.
+
+
+2. strncpy
+mandatory
+Write a function that copies a string.
+
+Prototype: char *_strncpy(char *dest, char *src, int n);
+Your function should work exactly like strncpy
+FYI: The standard library provides a similar function: strncpy. Run man strncpy to learn more.
+
+//SOLUTION
+
+Similar to the example above except n indicates where function concates to. Therefore scr while loop will be
+
+j = 0;
+while (j < n && scr[j] != 0)
+{
+	dest[i] = scr[j];
+	i++;
+	j++
+}
