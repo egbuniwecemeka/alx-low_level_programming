@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * reverse_array
+ * reverse_array - Reverse a string
  * @a: pointer to array
  * @n: number of elements in array
  *
@@ -17,5 +17,5 @@ void reverse_array(int *a, int n)
 		a[i] = a[n];
 		a[n] = j;
 	}
-	
+
 }
