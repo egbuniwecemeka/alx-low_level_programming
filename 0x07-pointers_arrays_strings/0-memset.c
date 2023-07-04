@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _memset() - fills the first n bytes of the memory area
+ * _memset - fills the first n bytes of the memory area
  * @s: starting address to be filled
  * @b: desired value
  * @n: amount of bytes
