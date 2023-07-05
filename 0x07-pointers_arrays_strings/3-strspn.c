@@ -3,7 +3,8 @@
  * _strspn - Entry point
  * @s: Input string
  * @accept: Input
- * @n: number of bytes
+ *
+ * Return: n
  */
 unsigned int _strspn(char *s, char *accept)
 {
