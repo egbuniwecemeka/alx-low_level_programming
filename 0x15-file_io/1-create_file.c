@@ -25,7 +25,7 @@ int create_file(const char *filename, const char *text_content)
 	for (n = 0; text_content[n]; n++);
 
 	if (!text_content)
-		return (-1);
+		text_content = "";
 
 	wr = write(fildes, text_content, n);
 
