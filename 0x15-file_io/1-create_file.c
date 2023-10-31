@@ -22,10 +22,10 @@ int create_file(const char *filename, char *text_content)
 	if (fildes == -1)
 		return (-1);
 
-	for (n = 0; text_content[n]; n++);
-
 	if (!text_content)
 		text_content = "";
+
+	for (n = 0; text_content[n]; n++);
 
 	wr = write(fildes, text_content, n);
 
