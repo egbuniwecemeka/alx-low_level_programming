@@ -12,4 +12,9 @@ No more than 5 functions per file
 All your header files should be include guarded
 Use system calls only when you need to (why?)
 Write a README with the description of your project
-You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. Format, see Docker
+You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository.
+
+
+Exercises
+0. getppid
+Write a program that prints the PID of the parent process. Run your program several times within the same shell. It should be the same. Does echo $$ print the same value? Why?
