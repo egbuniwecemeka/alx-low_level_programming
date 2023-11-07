@@ -4,11 +4,11 @@
 
 int main(void)
 {
-	char str[30];
+	char str[50] = "Hello, I will become a Software Engineer";
 
 	const char *delim = " ";
 
-	strtok(str, delim);
+	str_token(str, delim);
 
 	return (0);
 }

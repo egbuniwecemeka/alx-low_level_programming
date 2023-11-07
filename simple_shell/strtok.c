@@ -1,12 +1,8 @@
 #include <string.h>
 #include <stdio.h>
 
-int main(void)
+int str_token(char *str, const char *delim)
 {
-	char str[40] = "Hello, I am an Enginner";
-
-	const char *delim = " ";
-
 	char *token;
 	token = strtok(str, delim);
 	int i;
@@ -18,7 +14,7 @@ int main(void)
 		token = strtok(NULL, delim);
 	}
 
-	for (i = 0; i < 41; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		printf("%c", str[i]);
 	}

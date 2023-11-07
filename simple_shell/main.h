@@ -2,6 +2,6 @@
 #define MAIN_H
 
 int myppid(void);
-char *strtok(char *str, const char *delim);
+char *str_token(char *str, const char *delim);
 
 #endif
