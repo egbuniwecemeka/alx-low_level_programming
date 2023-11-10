@@ -6,9 +6,11 @@ int main(void)
 {
 	char str[50] = "Hello, I will become a Software Engineer";
 
-	const char *delim = " ";
+	/*const char *delim = " ";
 
-	str_token(str, delim);
+	str_token(str, delim);*/
+
+	mystr_len();
 
 	return (0);
 }

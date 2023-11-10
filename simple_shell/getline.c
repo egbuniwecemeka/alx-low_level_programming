@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include "main.h"
 
 
 int main(void)
@@ -15,7 +13,7 @@ size_t n = 0;
 	while ((readByte = getline(&lineptr, &n, stdin)) != 1)
 	{
 		if (readByte > 1)
-			write(STDOUT_FILENO, lineptr, readByte);
+			execve_func(lineptr);	
 
 		write(STDOUT_FILENO, prompt, 2);
 	}
