@@ -89,7 +89,7 @@ list_t node_end(list_t **head, const char *str, int n)
  * Return: node_list size
  */
 
-size_t print_list(const list_t *first)
+size_t print_str_list(const list_t *first)
 {
 	size_t i = 0;
 
