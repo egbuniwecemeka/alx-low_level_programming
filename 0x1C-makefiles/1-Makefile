@@ -7,5 +7,5 @@ CC = gcc
 SCR = $(wildcard *.c)
 
 all: $(SCR)
-	${CC} ${SCR} -o school
+	$(CC) $(SCR) -o school
 
