@@ -1,0 +1,11 @@
+# Usage
+# make -f 1-Makefile	Create an exeecutable
+
+.PHONY: all
+
+CC = gcc
+SCR = $(wildcard *.c)
+
+all: main.c school.c
+	${CC} ${SCR} -o school
+
