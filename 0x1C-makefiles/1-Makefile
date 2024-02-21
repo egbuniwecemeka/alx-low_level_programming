@@ -1,8 +1,6 @@
 # Usage
 # make -f 1-Makefile	Create an exeecutable
 
-.PHONY: all
-
 CC = gcc
 SCR = main.c school.c
 
