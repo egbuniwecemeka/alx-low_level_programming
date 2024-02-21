@@ -1,0 +1,14 @@
+.PHONY: all say_hello generate
+
+all: say_hello generate
+
+say_hello:
+	@echo "Hello World"
+
+generate:
+	@echo "Creating files"
+	touch file-{1..10}.txt
+
+clean:
+	@echo "Delete files"
+	rm *.txt
