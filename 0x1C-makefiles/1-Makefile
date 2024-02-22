@@ -1,6 +1,3 @@
-# Usage
-# make -f 1-Makefile	Create an exeecutable
-
 CC = gcc
 SCR = main.c school.c
 
