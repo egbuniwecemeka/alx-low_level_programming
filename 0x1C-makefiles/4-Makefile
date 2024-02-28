@@ -17,3 +17,5 @@ oclean:
 	$(RM) $(OBJ)
 fclean:
 	clean oclean
+re:
+	$(RM) $(OBJ) && $(MAKE)
