@@ -8,9 +8,7 @@ RM = rm -rvf
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(OBJ)
-	@echo $(CC) $(CFLAGS) -c -o main.o main.c
-	@echo $(CC) $(CFLAGS) -c -o school.o school.c
-	@echo $(CC) main.o school.o -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
 oclean:
