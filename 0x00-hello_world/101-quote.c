@@ -9,12 +9,14 @@
  */
 int main(void)
 {
-	const char *str = "and that piece of art is useful\" - "
-			"Dora Korpar, 2015-10-19\n";
-	ssize_t length = strlen(str);
-	ssize_t bytes_towrite = write(2, str, length);
+	const char *str1 = "and that piece of art is useful\" - ";
+	const char *str2 = "Dora Korpar, 2015-10-19\n";
+	ssize_t len1 = strlen(str1);
+	ssize_t len2 = strlen(str2);
+	ssize_t bytes_towrite1 = write(2, str1, len1);
+	ssize_t bytes_towrite2 = write(2, str2, len2);
 
-	if (bytes_towrite == length)
+	if (bytes_towrite1 == len1 && bytes_towrite2 == len2)
 		return (1);
 	else
 		return (EXIT_FAILURE);
