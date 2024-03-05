@@ -9,10 +9,10 @@
  */
 int main(void)
 {
-	const char *m = "and that piece of art is useful\" - "
+	const char *str = "and that piece of art is useful\" - "
 			"Dora Korpar, 2015-10-19\n";
-	ssize_t length = strlen(message);
-	ssize_t bytes_towrite = write(2, message, length);
+	ssize_t length = strlen(str);
+	ssize_t bytes_towrite = write(2, str, length);
 
 	if (bytes_towrite == length)
 		return (1);
