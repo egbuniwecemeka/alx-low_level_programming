@@ -1,62 +1,39 @@
 	.file	"main.c"
 	.intel_syntax noprefix
 	.text
-	.def	printf;	.scl	3;	.type	32;	.endef
-	.seh_proc	printf
-printf:
-	push	rbp
-	.seh_pushreg	rbp
-	push	rbx
-	.seh_pushreg	rbx
-	sub	rsp, 56
-	.seh_stackalloc	56
-	lea	rbp, 48[rsp]
-	.seh_setframe	rbp, 48
-	.seh_endprologue
-	mov	QWORD PTR 32[rbp], rcx
-	mov	QWORD PTR 40[rbp], rdx
-	mov	QWORD PTR 48[rbp], r8
-	mov	QWORD PTR 56[rbp], r9
-	lea	rax, 40[rbp]
-	mov	QWORD PTR -16[rbp], rax
-	mov	rbx, QWORD PTR -16[rbp]
-	mov	ecx, 1
-	mov	rax, QWORD PTR __imp___acrt_iob_func[rip]
-	call	rax
-	mov	r8, rbx
-	mov	rdx, QWORD PTR 32[rbp]
-	mov	rcx, rax
-	call	__mingw_vfprintf
-	mov	DWORD PTR -4[rbp], eax
-	mov	eax, DWORD PTR -4[rbp]
-	add	rsp, 56
-	pop	rbx
-	pop	rbp
-	ret
-	.seh_endproc
-	.def	__main;	.scl	2;	.type	32;	.endef
-	.section .rdata,"dr"
-.LC0:
-	.ascii "Holberton School\0"
-	.text
 	.globl	main
-	.def	main;	.scl	2;	.type	32;	.endef
-	.seh_proc	main
+	.type	main, @function
 main:
+.LFB0:
+	.cfi_startproc
+	endbr64
 	push	rbp
-	.seh_pushreg	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
 	mov	rbp, rsp
-	.seh_setframe	rbp, 0
-	sub	rsp, 32
-	.seh_stackalloc	32
-	.seh_endprologue
-	call	__main
-	lea	rcx, .LC0[rip]
-	call	printf
+	.cfi_def_cfa_register 6
 	mov	eax, 0
-	add	rsp, 32
 	pop	rbp
+	.cfi_def_cfa 7, 8
 	ret
-	.seh_endproc
-	.ident	"GCC: (tdm64-1) 10.3.0"
-	.def	__mingw_vfprintf;	.scl	2;	.type	32;	.endef
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
+	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	 1f - 0f
+	.long	 4f - 1f
+	.long	 5
+0:
+	.string	 "GNU"
+1:
+	.align 8
+	.long	 0xc0000002
+	.long	 3f - 2f
+2:
+	.long	 0x3
+3:
+	.align 8
+4:
