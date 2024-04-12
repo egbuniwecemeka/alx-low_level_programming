@@ -41,7 +41,8 @@ int jump_search(int *array, size_t size, int value)
 	for (; i < jump && array[i] < value; i++)
 		printf("Value checked array[%ld - [%d]\n", i, array[i]);
 
-	/* Return value if found, otherwise corresponding err message */
+	printf("Value checked array[%ld] - [%d]\n", i, array[i]);
 
+	/* Return value if found, otherwise corresponding err message */
 	return (array[i] == value ? (int)i : -1);
 }
