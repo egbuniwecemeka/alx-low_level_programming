@@ -11,28 +11,37 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	/*initializes variables a and b to define the blocks for jump search*/
-	int a = 0;
-	int b = sqrt(size);
-	size_t i;
+	/*initializes jump and jump_search to define the blocks for jump search*/
+	size_t i, jump, jump_search;
+
+	jump_search = sqrt(size);
 
 	/*checks if array is NULL or empty*/
 	if (array == NULL || size == 0)
 		return (-1);
 
 	/*jump search step to locate where value is */
-	while (b < (int)size && array[b] < value)
+	for (i = jump = 0; jump < size && array[jump] < value;)
 	{
-		a = b;
-		b += sqrt(size);
+		printf("Value checked array[%ld] - [%d]\n", jump, array[jump]);
+
+		/* Stores prev jump position */
+		i = jump;
+
+		/* Updates current jump position */
+		jump += jump_search;
 	}
+
+	printf("Value found between indexes [%ld] and [%ld]\n", i, jump);
+
+	/* Adjust jump position */
+	jump = jump < size - 1 ? jump : size - 1;
 
 	/* performs a linear search within identified block*/
-	for (i = a; i < (size_t)b && i < size; i++)
-	{
-		if (array[i] == value)
-			return (i);
-	}
+	for (; i < jump && array[i] < value; i++)
+		printf("Value checked array[%ld - [%d]\n", i, array[i]);
 
-	return (-1);
+	/* Return value if found, otherwise corresponding err message */
+
+	return (array[i] == value ? (int)i : -1);
 }
