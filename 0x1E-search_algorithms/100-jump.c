@@ -39,7 +39,7 @@ int jump_search(int *array, size_t size, int value)
 
 	/* performs a linear search within identified block*/
 	for (; i < jump && array[i] < value; i++)
-		printf("Value checked array[%ld - [%d]\n", i, array[i]);
+		printf("Value checked array[%ld] - [%d]\n", i, array[i]);
 
 	printf("Value checked array[%ld] - [%d]\n", i, array[i]);
 
