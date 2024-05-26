@@ -8,7 +8,7 @@
  */
 void print_to_98(int n)
 {
-	iint first = 1;
+	int first = 1;
 
 	if (n <= 98)
 	{
