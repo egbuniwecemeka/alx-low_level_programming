@@ -50,4 +50,31 @@ void print_to_98(int n)
 		}
 		_putchar('\n');
 	}
+	else
+	{
+		while (n >= 98)
+		{
+			if (!first)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+
+			first = 0;
+
+			if (n >= 100)
+			{
+				_putchar(n / 100 + '0');
+				_putchar((n / 10) % 10 + '0');
+				_putchar(n % 10 + '0');
+			}
+			else
+			{
+				_putchar(n / 10 + '0');
+				_putchar(n % 10 + '0');
+			}
+			n--;
+		}
+		_putchar('\n');
+	}
 }
