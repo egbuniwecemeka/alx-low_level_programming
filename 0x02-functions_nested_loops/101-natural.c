@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * sum_natural_numbers - sum multiples of a a natural number
- * @n: natural number input
+ * main - Entry point
  *
  * Return: void
  */
