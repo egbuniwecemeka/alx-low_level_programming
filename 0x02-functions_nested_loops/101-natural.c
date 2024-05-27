@@ -4,7 +4,7 @@
  * sum_natural_numbers - sum multiples of a a natural number
  * @n: natural number input
  *
- * Return: Success (0)
+ * Return: void
  */
 void sum_natural_numbers(int n)
 {
