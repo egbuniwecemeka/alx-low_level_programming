@@ -9,7 +9,7 @@ int main(void)
 {
 	int i, j, k;
 
-	int fib;
+	unsigned long fib;
 
 	j = 0;
 	k = 1;
@@ -22,9 +22,9 @@ int main(void)
 		j = k;
 		k = fib;
 
-		printf("%d", fib);
+		printf("%lu", fib);
 
-		if (i < 49)
+		if (i < 48)
 		{
 			printf(", ");
 		}
