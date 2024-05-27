@@ -9,7 +9,7 @@ int main(void)
 {
 	int i, j, k;
 
-	unsigned long fib;
+	unsigned long long fib;
 
 	j = 0;
 	k = 1;
