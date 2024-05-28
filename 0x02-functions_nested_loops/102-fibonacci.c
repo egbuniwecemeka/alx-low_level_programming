@@ -19,13 +19,15 @@ int main(void)
 
 	for (i = 2; i < 50; i++)
 	{
-		if (i >= 2)
+		if (i >= 2 && i != 50)
 		{
 			printf(", ");
 			fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 			printf("%ld", fibonacci[i]);
 		}
 	}
+
+	printf("\n");
 
 	return (0);
 }
