@@ -15,22 +15,18 @@ int main(void)
 
 	fibonacci[1] = 2;
 
-	for (i = 0; i < 50; i++)
+	printf("%ld, %ld", fibonacci[0], fibonacci[1]);
+
+	for (i = 2; i < 50; i++)
 	{
-		if (i == 0)
+		if (i >= 2)
 		{
+			printf(", ");
+			fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 			printf("%ld", fibonacci[i]);
 		}
-		else if (i == 1)
-		{
-			printf(", %ld", fibonacci[i]);
-		}
-		else
-		{
-			fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-			printf(", %ld", fibonacci[i]);
-		}
 	}
+	printf("\n");
 
 	return (0);
 }
