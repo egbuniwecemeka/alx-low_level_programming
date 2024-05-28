@@ -7,29 +7,27 @@
  */
 int main(void)
 {
-	int i, j, k;
+	int i;
+	long int fibonacci[50];
 
-	unsigned long fib;
+	fibonacci[0] = 1;
 
-	j = 0;
-	k = 1;
+	fibonacci[1] = 2;
 
-	for (i = 0; i < 49; i++)
+	for (i = 2; i < 50; i++)
 	{
 
-		fib = j + k;
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 
-		j = k;
-		k = fib;
-
-		printf("%lu", fib);
-
-		if (i < 48)
+		if (i == 49)
 		{
-			printf(", ");
+			printf("%ld\n", fibonacci[i]);
+		}
+		else
+		{
+			printf("%ld, ", fibonacci[i]);
 		}
 	}
-	printf("\n");
 
 	return (0);
 }
