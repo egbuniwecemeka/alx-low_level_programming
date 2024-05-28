@@ -8,24 +8,27 @@
 int main(void)
 {
 	int i;
+
 	long int fibonacci[50];
 
 	fibonacci[0] = 1;
 
 	fibonacci[1] = 2;
 
-	for (i = 2; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
-
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-
-		if (i == 49)
+		if (i == 0)
 		{
-			printf("%ld\n", fibonacci[i]);
+			printf("%ld", fibonacci[i]);
+		}
+		else if (i == 1)
+		{
+			printf(", %ld", fibonacci[i]);
 		}
 		else
 		{
-			printf("%ld, ", fibonacci[i]);
+			fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+			printf(", %ld", fibonacci[i]);
 		}
 	}
 
